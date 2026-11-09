@@ -1,0 +1,13 @@
+.radioButtonSelectItem {
+	display: flex;
+	align-items: center;
+}
+.radioButtonSelectText {
+	margin-left: 12px;
+}
+.radioButtonsWrapper {
+	padding-left: 2px;
+}
+.radioButtonSelectItem:not(:first-child) {
+	margin-top: 12px;
+}

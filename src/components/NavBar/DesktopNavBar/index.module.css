@@ -1,0 +1,132 @@
+.gsuNavDesktop {
+	position: relative;
+	width: 248px;
+	display: flex;
+	flex-direction: column;
+	background: var(--color-default-background);
+	border: 1px solid var(--color-main-border);
+	flex: 0 0 auto;
+	justify-content: space-between;
+	z-index: 2;
+}
+
+.gsuNavDesktopCollapsed {
+	max-width: 64px;
+}
+
+.gsuSideNav__collapseAction {
+	width: 48px;
+	height: 48px;
+	position: absolute;
+	top: 50%;
+	right: -34px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background: transparent;
+	border: 1px solid transparent;
+	cursor: pointer;
+	z-index: 1006;
+	transform: translateY(-50%) rotate(0deg);
+}
+
+
+.gsuSideNav__collapseAction img {
+	transition: 0.3s;
+}
+
+.gsuSideNav__collapseAction_left {
+	transform: translateY(-50%) rotate(180deg);
+}
+
+.linkWrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.quizPromo {
+	display: none;
+	margin-inline: auto;
+	padding: 16px 0;
+	max-width: 182px;
+	width: 100%;
+	/*border: 1px solid var(--color-gainsboro);*/
+	border-radius: 16px;
+}
+
+.quizPromo:hover {
+	border: 1px solid var(--color-secondary);
+}
+
+.quizPromo_collapsed {
+	padding: 0;
+	max-width: 40px;
+	border: 1px solid transparent;
+}
+
+.quizPromo_collapsed:hover {
+	border: 1px solid transparent;
+}
+
+.quizPromo__logo {
+	margin-inline: auto;
+	padding-bottom: 10px;
+	display: block;
+}
+
+/*.quizPromo__title {*/
+/*	padding-bottom: 16px;*/
+/*	font-size: 12px;*/
+/*	font-weight: 500;*/
+/*	text-align: center;*/
+/*	color: var(--color-rainbow-indigo-dark-black);*/
+/*}*/
+
+/*.quizPromo__actionElement {*/
+/*	margin-inline: auto;*/
+/*	padding: 8px 0;*/
+/*	display: block;*/
+/*	width: 150px;*/
+/*	background: var(--color-majorelle-blue);*/
+/*	border: 1px solid transparent;*/
+/*	border-radius: 100px;*/
+/*	font-size: 12px;*/
+/*	font-weight: 600;*/
+/*	color: var(--color-main-wizard);*/
+/*	cursor: pointer;*/
+/*}*/
+
+/*.quizPromo__actionElement:hover {*/
+/*	background-color: var(--color-majorelle-blue-hover);*/
+/*}*/
+
+/*.quizPromo__actionElement:disabled {*/
+/*	background-color: var(--color-american-silver);*/
+/*}*/
+
+.quizPromo__actionElement_collapsed {
+	padding: 8px;
+	width: 40px;
+	height: 40px;
+}
+
+.categoriesWrap {
+	display: flex;
+	flex-direction: column;
+	row-gap: 12px;
+	padding: 16px 12px;
+}
+
+.categoriesWrap > img {
+	width: 32px;
+	height: 32px;
+}
+
+@media (max-width: 880px) {
+	.gsuNavDesktop {
+		display: none;
+	}
+}

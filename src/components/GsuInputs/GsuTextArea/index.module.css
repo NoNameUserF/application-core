@@ -1,0 +1,14 @@
+.textAreaWrapper {
+    height: unset;
+}
+
+.textArea {
+    resize: none;
+    height: 100%;
+    margin-block: 12px;
+}
+
+.textArea {
+    border: none;
+    outline: none;
+}

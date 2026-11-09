@@ -1,0 +1,11 @@
+.wizardSelectCountSection {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+@media (max-width: 880px) {
+    .wizardSelectCountSection {
+        row-gap: 16px;
+    }
+}

@@ -1,0 +1,24 @@
+.multiSelectDescription {
+	display: flex;
+	align-items: center;
+}
+
+.multiSelectText {
+	margin-left: 8px;
+	font-weight: 500;
+	line-height: 130%;
+	color: var(--color-main-text);
+}
+
+.multiSelectTextWithoutImg {
+	margin-left: 0;
+}
+
+@media (max-width: 880px) {
+	.multiSelectText {
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 150%;
+		color: var(--color-main-text);
+	}
+}

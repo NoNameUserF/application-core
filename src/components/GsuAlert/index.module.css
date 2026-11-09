@@ -1,0 +1,54 @@
+.gsuAlertContainer {
+	position: absolute;
+	left: 24px;
+	right: 64px;
+	bottom: 24px;
+	z-index: 3000;
+}
+
+.gsuAlert {
+	background-color: var(--color-alert-background);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	column-gap: 8px;
+	max-width: 328px;
+	height: 45px;
+	padding: 0 8px 0 16px;
+	border-radius: 8px;
+	z-index: 3000;
+}
+
+.gsuAlertText {
+	color: var(--color-default-background);
+	word-break: normal;
+}
+
+.gsuAlertClose {
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 24px;
+	height: 24px;
+}
+
+.gsuAlertClose img {
+	width: 20px;
+	height: 20px;
+}
+
+@media (max-width: 880px) {
+	.gsuAlertContainer {
+		position: absolute;
+		left: 16px;
+		right: 16px;
+		bottom: 12px;
+	}
+
+	.gsuAlertText {
+		font-size: 12px;
+	}
+}

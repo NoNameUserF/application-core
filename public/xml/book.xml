@@ -1,0 +1,679 @@
+<flow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="./schema.xsd">
+
+    <question label="Для кого Вы выбираете книгу?"
+              gpt="Верни 4 книги"
+              type="one"
+              key="FOR_WHO">
+        <answer label="Для детей" key="FOR_KIDS">
+
+            <question label="Какие категории книг предпочитает Ваш ребенок?"
+                      gpt="Категория"
+                      type="one"
+                      key="KIDS_BOOK_CATEGORY">
+
+                <answer label="Художественная литература" key="KIDS_FICTION">
+                    <question label="Какие жанры художественной литературы предпочитает Ваш ребенок?"
+                              gpt="Жанр"
+                              type="one"
+                              key="FICTION_GENRE">
+
+                        <answer label="Сказки" key="KIDS_FAIRY_TALES">
+                            <question label="Какие поджанры сказок предпочитает Ваш ребенок?"
+                                      gpt="Поджанры"
+                                      type="many"
+                                      key="KIDS_FAIRY_TALES_SUBGENRE">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Классические сказки" key="CLASSIC"/>
+                                <answer label="Современные сказки" key="MODERN"/>
+                                <answer label="Сказки народов мира" key="NATIONAL"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Поэзия" key="KIDS_POETRY">
+                            <question label="Какие поджанры поэзии предпочитает Ваш ребенок?"
+                                      gpt="Поджанры"
+                                      type="many"
+                                      key="KIDS_POETRY_SUBGENRE">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Классическая детская поэзия" key="CLASSIC"/>
+                                <answer label="Современная детская поэзия" key="MODERN"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Проза" key="KIDS_PROSE">
+                            <question label="Какие поджанры прозы предпочитает Ваш ребенок?"
+                                      gpt="Поджанры"
+                                      type="many"
+                                      key="KIDS_PROSE_SUBGENRE">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Классическая детская проза" key="CLASSIC"/>
+                                <answer label="Современная детская проза" key="MODERN"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Детективы" key="KIDS_DETECTIVE">
+                            <question label="Какие поджанры детективов предпочитает Ваш ребенок?"
+                                      gpt="Поджанры"
+                                      type="many"
+                                      key="KIDS_DETECTIVE_SUBGENRE">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Классический детский детектив" key="CLASSIC"/>
+                                <answer label="Современный детский детектив" key="MODERN"/>
+                                <answer label="Исторический детский детектив" key="HISTORICAL"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Фантастика" key="KIDS_SCIENCE_FICTION">
+                            <question label="Какие поджанры фантастики предпочитает Ваш ребенок?"
+                                      gpt="Поджанры"
+                                      key="KIDS_SCIENCE_FICTION_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Попаданцы" key="PORTAL"/>
+                                <answer label="Детская космическая фантастика" key="SPACE"/>
+                                <answer label="Детская героическая фантастика" key="HEROIC"/>
+                                <answer label="Детская боевая фантастика" key="COMBAT"/>
+                                <answer label="Детская научная фантастика" key="SCIENCE"/>
+                                <answer label="Классическая детсеая фантастика" key="CLASSIC"/>
+                                <answer label="Современная детская фантастика" key="MODERN"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Приключения" key="KIDS_ADVENTURES">
+                            <question label="Какие поджанры приключений предпочитает Ваш ребенок?"
+                                      gpt="Поджанр"
+                                      key="KIDS_ADVENTURE_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Исторические приключения для детей" key="HISTORICAL"/>
+                                <answer label="Путешествия для детей" key="TRAVEL"/>
+                                <answer label="Вестерны для детей" key="WESTERN"/>
+                                <answer label="Морские приключения для детей" key="SEA"/>
+                                <answer label="Классика детской приключенческой литературы" key="CLASSIC"/>
+                                <answer label="Современная детская приключенческая литература" key="MODERN"/>
+                            </question>
+                        </answer>
+                    </question>
+
+                    <question label="Какой стиль повествования по душе Вашему ребенку?"
+                              gpt="Стиль повествования"
+                              type="one"
+                              key="KIDS_STORYTELLING_STYLE">
+                        <answer label="Любой" key="ANY"/>
+                        <answer label="Лёгкий" key="LIGHT"/>
+                        <answer label="Глубокий" key="DEEP"/>
+                        <answer label="Динамичный" key="DYNAMIC"/>
+                    </question>
+
+                    <question label="Какой темп развития сюжета предпочитает Ваш ребенок?"
+                              gpt="Тэмп развития сюжета"
+                              type="one"
+                              key="KIDS_PLOT_TEMPO">
+                        <answer label="Любой" key="ANY"/>
+                        <answer label="Медленный" key="SLOW"/>
+                        <answer label="Сбалансированный" key="BALANCED"/>
+                        <answer label="Быстрый" key="FAST"/>
+                    </question>
+
+                    <question label="Какой объём книги оптимален для Вашего ребенка?"
+                              gpt="Объем книги"
+                              type="one"
+                              key="KIDS_BOOK_VOLUME">
+                        <answer label="Любой" key="ANY"/>
+                        <answer label="До 200 страниц" key="UP_TO_200_PAGES"/>
+                        <answer label="От 200 до 400 страниц" key="FROM_200_TO_400_PAGES"/>
+                        <answer label="Более 400 страниц" key="MORE_THAN_400_PAGES"/>
+                    </question>
+                </answer>
+
+                <answer label="Буквари" key="PRIMER"/>
+            </question>
+
+            <question label="Книги какого региона Вы предпочитаете?"
+                      gpt="Из регионов"
+                      type="many"
+                      key="KIDS_REGION">
+                <answer label="Из Любых" key="ANY"/>
+                <answer label="Европа, Северная Америка, Австралия, Новая Зеландия" key="WEST"/>
+                <answer label="Азия, Тихоокеанский регион" key="EAST"/>
+                <answer label="Южная Америка, Ближний Восток, Африка" key="SOUTH"/>
+                <answer label="Россия и страны СНГ" key="RUSSIA_AND_CIS"/>
+            </question>
+        </answer>
+
+        <answer label="Для взрослых" key="FOR_ADULTS">
+            <question label="Какие категории книг Вы предпочитаете?"
+                      gpt="Категория"
+                      type="one"
+                      key="ADULTS_BOOK_CATEGORY">
+
+                <answer label="Художественная литература" key="ADULTS_FICTION">
+                    <question label="Какие жанры категории художественная литература Вы предпочитаете?"
+                              gpt="Жанр"
+                              key="ADULTS_FICTION_GENRE"
+                              type="one">
+
+                        <answer label="Боевики" key="ADULTS_ACTION">
+                            <question label="Какие поджанры боевиков вы предпочитаете?"
+                                      gpt="Поджанры"
+                                      key="ADULTS_ACTION_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Боевое фэнтези" key="FANTASY"/>
+                                <answer label="Боевая фантастика" key="SCIENCE_FICTION"/>
+                                <answer label="Триллер" key="THRILLER"/>
+                                <answer label="Вестерн" key="WESTERN"/>
+                                <answer label="Криминальный боевик" key="CRIME"/>
+                                <answer label="Фанфики по боевикам" key="FANFIC"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Приключения" key="ADULTS_ADVENTURE">
+                            <question label="Какие поджанры приключений Вы предпочитаете?"
+                                      gpt="Поджанр"
+                                      key="ADULTS_ADVENTURE_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Исторические приключения" key="HISTORICAL"/>
+                                <answer label="Путешествия" key="TRAVEL"/>
+                                <answer label="Вестерны" key="WESTERN"/>
+                                <answer label="Морские приключения" key="SEA"/>
+                                <answer label="Фанфики по приключениям" key="FANFIC"/>
+                                <answer label="Классика приключенческой литературы" key="CLASSIC"/>
+                                <answer label="Современная приключенческая литература" key="MODERN"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Биографии и мемуары" key="ADULTS_BIOGRAPHIES_AND_MEMOIRS">
+                            <question label="Какие биографии или мемуары Вы предпочитаете?"
+                                      gpt="Поджанры"
+                                      key="ADULTS_BIOGRAPHIES_AND_MEMOIRS_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Классические биографии" key="CLASSIC_BIOGRAPHIES"/>
+                                <answer label="Классические мемуары" key="CLASSIC_MEMOIRS"/>
+                                <answer label="Современные биографии" key="MODERN_BIOGRAPHIES"/>
+                                <answer label="Современные мемуары" key="MODERN_MEMOIRS"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Классическая литература" key="ADULTS_CLASSICS">
+                            <question label="Какие поджанры классической литературы Вы предпочитаете?"
+                                      gpt="Поджанры"
+                                      key="ADULTS_CLASSICS_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Античная литература" key="ANCIENT"/>
+                                <answer label="Древневосточная литература" key="ANCIENT_EASTERN"/>
+                                <answer label="Древнерусская литература" key="ANCIENT_RUSSIAN"/>
+                                <answer label="Старинная европейская литература" key="ANCIENT_EUROPEAN"/>
+                                <answer label="Классическая проза" key="PROSE"/>
+                                <answer label="Литература 18-го века" key="EIGHTEENTH_CENTURY_LITERATURE"/>
+                                <answer label="Литература 19-го века" key="NINETEENTH_CENTURY_LITERATURE"/>
+                                <answer label="Литература 20-го века" key="TWENTIETH_CENTURY_LITERATURE"/>
+                                <answer label="Мифы, легенды, эпосы" key="MYTH_LEGEND_EPIC"/>
+                                <answer label="Старинная литература" key="OLD"/>
+                                <answer label="Фолклор" key="FOLKLORE"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Классика жанра" key="ADULTS_CLASSICS_OF_GENRE">
+                            <question label="Какую классику жанра Вы предпочитаете?"
+                                      gpt="Поджанры"
+                                      key="ADULTS_CLASSICS_OF_GENRE_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Классика приключенческой литературы" key="ADVENTURE"/>
+                                <answer label="Классическая проза" key="PROSE"/>
+                                <answer label="Классический детектив" key="DETECTIVE"/>
+                                <answer label="Классическое фэнтези" key="FANTASY"/>
+                                <answer label="Классическая фантастика" key="FICTION"/>
+                                <answer label="Классические юмор и сатира" key="HUMOROUS"/>
+                                <answer label="Классические любовные романы" key="ROMANCE"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Детективы" key="ADULTS_DETECTIVE">
+                            <question label="Какие поджанры детективов Вы предпочитаете?"
+                                      gpt="Поджанры"
+                                      key="ADULTS_DETECTIVE_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Крутой детектив" key="HARD_BOILED"/>
+                                <answer label="Политический детектив" key="POLITICAL"/>
+                                <answer label="Шпионский детектив" key="SPY"/>
+                                <answer label="Иронический детектив" key="IRONIC"/>
+                                <answer label="Триллер" key="THRILLER"/>
+                                <answer label="Полицейский детектив" key="POLICE"/>
+                                <answer label="Исторический детектив" key="HISTORICAL"/>
+                                <answer label="Фанфики по детективам" key="FANFIC"/>
+                                <answer label="Классический детектив" key="CLASSIC"/>
+                                <answer label="Современный детектив" key="MODERN"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Фанфики" key="ADULTS_FANFIC">
+                            <question label="Какой фанфик Вы предпочитаете?"
+                                      gpt="Поджанры"
+                                      key="ADULTS_FANFIC_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Фанфики по боевикам" key="ACTION"/>
+                                <answer label="Фанфики по приключениям" key="ADVENTURE"/>
+                                <answer label="Фанфики по классической литературе" key="CLASSIC_LITERATURE"/>
+                                <answer label="Фанфики по детективам" key="DETECTIVE"/>
+                                <answer label="Фанфики по фэнтези" key="FANTASY"/>
+                                <answer label="Фанфики по фантастике" key="FICTION"/>
+                                <answer label="Фанфики по исторической литературе" key="HISTORICAL"/>
+                                <answer label="Фанфики по любовным романам" key="ROMANCE"/>
+                                <answer label="Фанфики по ужасам" key="HORROR"/>
+                                <answer label="Фанфики по мистике" key="MYSTERY"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Фэнтези" key="ADULTS_FANTASY">
+                            <question label="Какие поджанры фэнтези Вы предпочитаете?"
+                                      gpt="Поджанры"
+                                      key="ADULTS_FANTASY_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Попаданцы" key="PORTAL"/>
+                                <answer label="Боевое фэнтези" key="COMBAT"/>
+                                <answer label="Любовное фэнтези" key="ROMANCE"/>
+                                <answer label="Фэнтези про драконов" key="DRAGON"/>
+                                <answer label="Юмористическое фэнтези" key="HUMOROUS"/>
+                                <answer label="Историческое фэнтези" key="HISTORICAL"/>
+                                <answer label="Фэнтези про волшебников" key="WIZARD"/>
+                                <answer label="Городское фэнтези" key="URBAN"/>
+                                <answer label="Фэнтези про вампиров" key="VAMPIRE"/>
+                                <answer label="Детективное фэнтези" key="DETECTIVE"/>
+                                <answer label="Героическое фэнтези" key="HEROIC"/>
+                                <answer label="Эротическое фэнтези" key="EROTIC"/>
+                                <answer label="Фэнтези про магические академии и школы" key="MAGIC_ACADEMY"/>
+                                <answer label="Фанфики по фэнтези" key="FANFIC"/>
+                                <answer label="Классическое фэнтези" key="CLASSIC"/>
+                                <answer label="Современное фэнтези" key="MODERN"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Фантастика" key="ADULTS_SCIENCE_FICTION">
+                            <question label="Какие поджанры фантастики Вы предпочитаете?"
+                                      gpt="Поджанры"
+                                      key="ADULTS_SCIENCE_FICTION_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Попаданцы" key="PORTAL"/>
+                                <answer label="Юмористическая фантастика" key="HUMOROUS"/>
+                                <answer label="Социальная фантастика" key="SOCIAL"/>
+                                <answer label="Космическая фантастика" key="SPACE"/>
+                                <answer label="Любовно-фантастические романы" key="ROMANTIC"/>
+                                <answer label="Героическая фантастика" key="HEROIC"/>
+                                <answer label="Боевая фантастика" key="COMBAT"/>
+                                <answer label="Научная фантастика" key="SCIENCE"/>
+                                <answer label="Киберпанк" key="CYBERPUNK"/>
+                                <answer label="Историческая фантастика" key="HISTORICAL"/>
+                                <answer label="Стимпанк" key="STEAMPUNK"/>
+                                <answer label="Утопия" key="UTOPIA"/>
+                                <answer label="Фанфики по фантастике" key="FANFIC"/>
+                                <answer label="Классическая фантастика" key="CLASSIC"/>
+                                <answer label="Современная фантастика" key="MODERN"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Историческая литература" key="ADULTS_HISTORICAL">
+                            <question label="Какие поджанры исторической литературы Вы предпочитаете?"
+                                      gpt="Поджанры"
+                                      key="ADULTS_HISTORICAL_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Историческое фэнтези" key="FANTASY"/>
+                                <answer label="Исторические приключения" key="ADVENTURE"/>
+                                <answer label="Историческое о войне" key="WAR"/>
+                                <answer label="Историческое о путешествиях" key="TRAVEL"/>
+                                <answer label="Исторический любовный роман" key="ROMANCE"/>
+                                <answer label="Исторический документальный" key="DOCUMENTARY"/>
+                                <answer label="Историческая биография" key="BIOGRAPHY"/>
+                                <answer label="Исторические мемуары" key="MEMOIR"/>
+                                <answer label="Историческая фантастика" key="FICTION"/>
+                                <answer label="Исторический детектив" key="DETECTIVE"/>
+                                <answer label="Исторический научно-популярный" key="NON_FICTION"/>
+                                <answer label="Фанфики по исторической литературе" key="FANFIC"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Ужасы" key="ADULTS_HORROR">
+                            <question label="Какие поджанры ужасов Вы предпочитаете?"
+                                      gpt="Поджанры"
+                                      key="ADULTS_HORROR_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Фанфики по ужасам" key="FANFIC"/>
+                                <answer label="Классические ужасы" key="CLASSIC"/>
+                                <answer label="Современные ужасы" key="MODERN"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Юмористическая литература" key="ADULTS_HUMOR">
+                            <question label="Какие поджанры юмористической литературы Вы предпочитаете?"
+                                      gpt="Поджанры"
+                                      key="ADULTS_HUMOR_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Анекдоты" key="ANECDOTES"/>
+                                <answer label="Юмористические стихи" key="POEMS"/>
+                                <answer label="Юмористическая проза" key="PROSE"/>
+                                <answer label="Классические юмор и сатира" key="CLASSIC"/>
+                                <answer label="Современные юмор и сатира" key="MODERN"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Современная проза" key="ADULTS_MODERN_PROSE">
+                            <question label="Какие поджанры современной прозы Вы предпочитаете?"
+                                      gpt="Поджанры"
+                                      key="ADULTS_MODERN_PROSE_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Современная проза о войне" key="WAR"/>
+                                <answer label="Современная историческая проза" key="HISTORICAL"/>
+                                <answer label="Современная контркультура" key="COUNTERCULTURE"/>
+                                <answer label="Современный детектив" key="MODERN"/>
+                                <answer label="Современные любовные романы" key="ROMANCE"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Мистика" key="ADULTS_MYSTERY">
+                            <question label="Какие поджанры мистики Вы предпочитаете?"
+                                      gpt="Поджанры"
+                                      key="ADULTS_MYSTERY_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Фанфики по мистике" key="FANFIC"/>
+                                <answer label="Классическая мистика" key="CLASSIC"/>
+                                <answer label="Современная мистика" key="MODERN"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Пьесы и драматургия" key="ADULTS_PLAY_AND_DRAMA">
+                            <question label="Какие поджанры пьес и драматургии Вы предпочитаете?"
+                                      gpt="Поджанры"
+                                      key="ADULTS_PLAY_AND_DRAMA_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Классические пьесы" key="CLASSIC_PLAY"/>
+                                <answer label="Классическая драматургия" key="CLASSIC_DRAMA"/>
+                                <answer label="Современные пьесы" key="MODERN_PLAY"/>
+                                <answer label="Современная драматургия" key="MODERN_DRAMA"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Стихи и поэзия" key="ADULTS_POETRY">
+                            <question label="Какие стихи и поэзию Вы предпочитаете?"
+                                      gpt="Поджанры"
+                                      key="ADULTS_POETRY_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Историческая поэзия" key="HISTORICAL"/>
+                                <answer label="Романтическая поэзия" key="ROMANCE"/>
+                                <answer label="Классическая поэзия" key="CLASSIC"/>
+                                <answer label="Современная поэзия" key="MODERN"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Любовные романы" key="ADULTS_ROMANCE">
+                            <question label="Какие поджанры любовных романов Вы предпочитаете?"
+                                      gpt="Поджанры"
+                                      key="ADULTS_ROMANCE_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Любовно-фантастические романы" key="FICTION"/>
+                                <answer label="Эротические романы" key="EROTIC"/>
+                                <answer label="Короткие любовные романы" key="SHORT"/>
+                                <answer label="Исторические любовные романы" key="HISTORICAL"/>
+                                <answer label="Остросюжетные любовные романы" key="ACTION_PACKED"/>
+                                <answer label="Любовное фэнтези" key="FANTASY"/>
+                                <answer label="Фанфики по любовным романам" key="FANFIC"/>
+                                <answer label="Классические любовные романы" key="CLASSIC"/>
+                                <answer label="Современные любовные романы" key="MODERN"/>
+                            </question>
+                        </answer>
+                    </question>
+
+                    <question label="Какой стиль повествования Вы предпочитаете?"
+                              gpt="Стиль повествования"
+                              type="one"
+                              key="ADULTS_STORYTELLING_STYLE">
+                        <answer label="Любой" key="ANY"/>
+                        <answer label="Лёгкий" key="LIGHT"/>
+                        <answer label="Глубокий" key="DEEP"/>
+                        <answer label="Динамичный" key="DYNAMIC"/>
+                    </question>
+
+                    <question label="Какой темп развития сюжета Вы предпочитаете?"
+                              gpt="Тэмп развития сюжета"
+                              type="one"
+                              key="ADULTS_PLOT_TEMPO">
+                        <answer label="Любой" key="ANY"/>
+                        <answer label="Медленный" key="SLOW"/>
+                        <answer label="Сбалансированный" key="BALANCED"/>
+                        <answer label="Быстрый" key="FAST"/>
+                    </question>
+
+                    <question label="Какой объём книги для Вас оптимален?"
+                              gpt="Объем книги"
+                              type="one"
+                              key="ADULTS_BOOK_VOLUME">
+                        <answer label="Любой" key="ANY"/>
+                        <answer label="До 200 страниц" key="UP_TO_200_PAGES"/>
+                        <answer label="От 200 до 400 страниц" key="FROM_200_TO_400_PAGES"/>
+                        <answer label="Более 400 страниц" key="MORE_THAN_400_PAGES"/>
+                    </question>
+
+                </answer>
+
+                <answer label="Знания и навыки" key="ADULTS_KNOWLEDGE">
+                    <question label="Какие жанры в категории знания и навыки Вы предпочитаете?"
+                              gpt="Жанр"
+                              key="ADULTS_KNOWLEDGE_GENRE"
+                              type="one">
+
+                        <answer label="Научно-популярная литература" key="ADULTS_NONFICTION">
+                            <question label="Какие поджанры научно-популярной литературы Вы предпочитаете?"
+                                      gpt="Поджанры"
+                                      key="ADULTS_NONFICTION_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Физика и математика" key="PHYSICS_AND_MATHEMATICS"/>
+                                <answer label="Космос и вселенная" key="SPACE_AND_UNIVERSE"/>
+                                <answer label="Будущее и технологии" key="FUTURE_AND_TECHNOLOGY"/>
+                                <answer label="Биология и химия" key="BIOLOGY_AND_CHEMISTRY"/>
+                                <answer label="Здоровье и медицина" key="HEALTH_AND_MEDICINE"/>
+                                <answer label="Эволюция и антропология" key="EVOLUTION_AND_ANTHROPOLOGY"/>
+                                <answer label="Философия и логика" key="PHILOSOPHY_AND_LOGIC"/>
+                                <answer label="Политика и власть" key="POLITICS_AND_POWER"/>
+                            </question>
+                        </answer>
+
+                        <answer label="IT литература" key="ADULTS_IT">
+                            <question label="Какие поджанры IT литературы Вы предпочитаете?"
+                                      gpt="Поджанры"
+                                      key="ADULTS_IT_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Базы данных" key="DATABASES"/>
+                                <answer label="Программирование" key="PROGRAMMING"/>
+                                <answer label="Интернет" key="INTERNET"/>
+                                <answer label="Программы" key="SOFTWARE"/>
+                                <answer label="ОС и сети" key="OS_AND_NETWORKS"/>
+                                <answer label="Компьютерное железо" key="HARDWARE"/>
+                                <answer label="Книги о компьютерах" key="COMPUTER_BOOKS"/>
+                                <answer label="Информационная безопасность" key="INFORMATION_SECURITY"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Культура и искусство" key="ADULTS_ART_AND_CULTURE">
+                            <question label="Какие поджанры культуры и искусств Вы предпочитаете?"
+                                      gpt="Поджанры"
+                                      key="ADULTS_ART_AND_CULTURE_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Цирк" key="CIRCUS"/>
+                                <answer label="Танцы" key="DANCE"/>
+                                <answer label="Музеи и коллекции" key="MUSEUMS_AND_COLLECTIONS"/>
+                                <answer label="История искусства" key="ART_HISTORY"/>
+                                <answer label="Искусствоведение" key="ART_STUDIES"/>
+                                <answer label="Ноты" key="SHEET_MUSIC"/>
+                                <answer label="Музыка" key="MUSIC"/>
+                                <answer label="Телевидение" key="TELEVISION"/>
+                                <answer label="Искусство фотографии" key="PHOTOGRAPHY"/>
+                                <answer label="Изобразительное искусство" key="VISUAL_ARTS"/>
+                                <answer label="Опера и балет" key="OPERA_AND_BALLET"/>
+                                <answer label="Кинематограф" key="CINEMA"/>
+                                <answer label="Театр" key="THEATER"/>
+                                <answer label="Архитектура" key="ARCHITECTURE"/>
+                                <answer label="Критика" key="CRITICISM"/>
+                                <answer label="Дизайн" key="DESIGN"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Эзотерика" key="ADULTS_ESOTERIC">
+                            <question label="Какие поджанры эзотерики Вы предпочитаете?"
+                                      gpt="Поджанры"
+                                      key="ADULTS_ESOTERIC_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Эзотерика и оккультизм" key="ESOTERICA_AND_OCCULTISM"/>
+                                <answer label="Фэншуй / фэн-шуй" key="FENG_SHUI"/>
+                                <answer label="Спиритизм" key="SPIRITISM"/>
+                                <answer label="Пророчества и предсказания" key="PROPHECIES_AND_PREDICTIONS"/>
+                                <answer label="Современные религиозные течения" key="MODERN_RELIGIOUS_MOVEMENTS"/>
+                                <answer label="Практическая эзотерика" key="PRACTICAL_ESOTERICA"/>
+                                <answer label="Парапсихология" key="PARAPSYCHOLOGY"/>
+                                <answer label="Магия и колдовство" key="MAGIC_AND_WITCHCRAFT"/>
+                                <answer label="Йога" key="YOGA"/>
+                                <answer label="Гадание" key="DIVINATION"/>
+                                <answer label="Толкование снов" key="DREAM_INTERPRETATION"/>
+                                <answer label="Астрология" key="ASTROLOGY"/>
+                            </question>
+                        </answer>
+
+                        <answer label="Изучение языков" key="ADULTS_LANGUAGE_LEARNING">
+                            <question label="Какие языки Вы предпочитаете?"
+                                      gpt="Поджанры"
+                                      key="ADULTS_LANGUAGE_LEARNING_SUBGENRE"
+                                      type="many">
+                                <answer label="Любые" key="ANY"/>
+                                <answer label="Английский язык" key="ENGLISH"/>
+                                <answer label="Немецкий язык" key="GERMAN"/>
+                                <answer label="Французский язык" key="FRENCH"/>
+                                <answer label="Итальянский язык" key="ITALIAN"/>
+                                <answer label="Испанский язык" key="SPANISH"/>
+                                <answer label="Польский язык" key="POLISH"/>
+                            </question>
+                        </answer>
+                    </question>
+                </answer>
+
+                <answer label="Психология и мотивация" key="ADULTS_PSYCHOLOGY">
+                    <question label="Какие жанры в категории психология и мотивация Вы предпочитаете?"
+                              gpt="Жанры"
+                              key="ADULTS_PSYCHOLOGY_GENRE"
+                              type="many">
+                        <answer label="Любые" key="ANY"/>
+                        <answer label="Возрастная психология" key="DEVELOPMENTAL_PSYCHOLOGY"/>
+                        <answer label="Практика психологии" key="PRACTICAL_PSYCHOLOGY"/>
+                        <answer label="Детская психология" key="CHILD_PSYCHOLOGY"/>
+                        <answer label="Саморазвитие и личностный рост" key="SELF_DEVELOPMENT"/>
+                        <answer label="Классики психологии" key="CLASSICS_OF_PSYCHOLOGY"/>
+                        <answer label="Состояния и явления психики" key="MENTAL_STATES_AND_PHENOMENA"/>
+                        <answer label="Социальная психология" key="SOCIAL_PSYCHOLOGY"/>
+                        <answer label="Отраслевая психология" key="INDUSTRIAL_PSYCHOLOGY"/>
+                        <answer label="Научно-популярная психология" key="POPULAR_PSYCHOLOGY"/>
+                        <answer label="Развитие психики" key="PSYCHE_DEVELOPMENT"/>
+                        <answer label="Соционика" key="SOCIONICS"/>
+                        <answer label="Семейная психология" key="FAMILY_PSYCHOLOGY"/>
+                        <answer label="История психологии" key="HISTORY_OF_PSYCHOLOGY"/>
+                        <answer label="Общая психология" key="GENERAL_PSYCHOLOGY"/>
+                        <answer label="Психология управления" key="MANAGEMENT_PSYCHOLOGY"/>
+                        <answer label="Секс и отношения" key="SEX_AND_RELATIONSHIPS"/>
+                        <answer label="Основы психологии" key="BASICS_OF_PSYCHOLOGY"/>
+                        <answer label="Психологические тренинги" key="PSYCHOLOGICAL_TRAINING"/>
+                        <answer label="Практическая психология" key="APPLIED_PSYCHOLOGY"/>
+                        <answer label="НЛП" key="NLP"/>
+                        <answer label="Статистика в психологии" key="STATISTICS_IN_PSYCHOLOGY"/>
+                        <answer label="Клиническая психология" key="CLINICAL_PSYCHOLOGY"/>
+                        <answer label="Транзакционный анализ" key="TRANSACTIONAL_ANALYSIS"/>
+                        <answer label="Психологические тесты" key="PSYCHOLOGICAL_TESTS"/>
+                        <answer label="Нейропсихология" key="NEUROPSYCHOLOGY"/>
+                        <answer label="Психоанализ" key="PSYCHOANALYSIS"/>
+                        <answer label="Психологическая консультация" key="PSYCHOLOGICAL_COUNSELING"/>
+                        <answer label="Психотерапия" key="PSYCHOTHERAPY"/>
+                    </question>
+                </answer>
+
+                <answer label="Хобби и досуг" key="ADULTS_LEISURE">
+                    <question label="Какие жанры в категории хобби и досуг Вы предпочитаете?"
+                              gpt="Жанры"
+                              key="ADULTS_LEISURE_GENRE"
+                              type="many">
+                        <answer label="Любые" key="ANY"/>
+                        <answer label="Отдых и туризм" key="TOURISM"/>
+                        <answer label="Хобби и увлечения" key="HOBBY"/>
+                        <answer label="Охота" key="HUNTING"/>
+                        <answer label="Рыбалка" key="FISHING"/>
+                        <answer label="Природа и животные" key="NATURE"/>
+                        <answer label="Мода и стиль" key="FASHION"/>
+                        <answer label="Автомобили и ПДД" key="CARS"/>
+                        <answer label="Сад, огород, ландшафтный дизайн" key="GARDEN"/>
+                        <answer label="Развлечения" key="ENTERTAINMENT"/>
+                        <answer label="Рукоделие и ремесла" key="CRAFTS"/>
+                        <answer label="Искусство фотографии" key="PHOTOGRAPHY"/>
+                        <answer label="Спорт и фитнес" key="SPORT"/>
+                        <answer label="Изобразительное искусство" key="ART"/>
+                        <answer label="Сделай сам" key="DIY"/>
+                        <answer label="Йога" key="YOGA"/>
+                        <answer label="Кулинария, книги рецептов" key="COOKING"/>
+                        <answer label="Интерьеры, дизайн" key="DESIGN"/>
+                        <answer label="Фэншуй, фэн-шуй" key="FENG_SHUI"/>
+                        <answer label="Домашние животные" key="PETS"/>
+                        <answer label="Ремонт в квартире" key="RENOVATION"/>
+                        <answer label="Домашнее хозяйство" key="HOUSEKEEPING"/>
+                        <answer label="Комнатные растения" key="HOUSEPLANTS"/>
+                    </question>
+                </answer>
+
+                <answer label="Спорт, здоровье, красота" key="ADULTS_LIFESTYLE">
+                    <question label="Какие жанры в категории спорт, красота и здоровье Вы предпочитаете?"
+                              gpt="Жанры"
+                              key="ADULTS_LIFESTYLE_GENRE"
+                              type="many">
+                        <answer label="Любые" key="ANY"/>
+                        <answer label="Красота" key="BEAUTY"/>
+                        <answer label="Здоровье" key="HEALTH"/>
+                        <answer label="Спорт и фитнес" key="SPORT"/>
+                        <answer label="Мода и стиль" key="FASHION"/>
+                        <answer label="Этикет" key="ETIQUETTE"/>
+                        <answer label="Женское здоровье" key="WOMEN_HEALTH"/>
+                        <answer label="Мужское здоровье" key="MEN_HEALTH"/>
+                        <answer label="Правильное питание" key="HEALTHY_FOOD"/>
+                        <answer label="Медитация" key="MEDITATION"/>
+                        <answer label="Йога" key="YOGA"/>
+                        <answer label="Саморазвитие и личностный рост" key="SELF_DEVELOPMENT"/>
+                    </question>
+                </answer>
+            </question>
+
+            <question label="Книги какого региона Вы предпочитаете?"
+                      gpt="Из регионов"
+                      type="many"
+                      key="ADULTS_REGION">
+                <answer label="Любые" key="ANY"/>
+                <answer label="Европа, Северная Америка, Австралия, Новая Зеландия" key="WEST"/>
+                <answer label="Азия, Тихоокеанский регион" key="EAST"/>
+                <answer label="Южная Америка, Ближний Восток, Африка" key="SOUTH"/>
+                <answer label="Россия и страны СНГ" key="RUSSIA_AND_CIS"/>
+            </question>
+
+        </answer>
+    </question>
+</flow>

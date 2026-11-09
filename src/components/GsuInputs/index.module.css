@@ -1,0 +1,118 @@
+.inputContainer {
+    position: relative;
+    width: 100%;
+}
+
+.inputWrapper {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    border: 1px solid var(--color-main-border);
+    border-radius: 8px;
+    flex: 1;
+}
+
+.filled {
+    border: 1px solid var(--color-secondary);
+}
+
+.opened {
+    border: 1px solid var(--color-primary);
+}
+
+@media (width >= 881px) {
+    .inputWrapper:hover {
+        border: 1px solid var(--color-primary-hover);
+        outline: 1px solid var(--color-primary-hover);
+    }
+
+    .opened:hover {
+        outline: 1px solid var(--color-primary);
+        border: 1px solid var(--color-primary);
+    }
+}
+
+@media (width <= 880px) {
+    .inputWrapper:active {
+        border: 1px solid var(--color-primary-hover);
+        outline: 1px solid var(--color-primary-hover);
+    }
+
+    .opened:active {
+        outline: 1px solid var(--color-primary);
+        border: 1px solid var(--color-primary);
+    }
+}
+
+.error {
+    border: 1px solid var(--color-error);
+}
+
+@media (width >= 881px) {
+    .error:hover {
+        outline: 1px solid var(--color-error);
+        border: 1px solid var(--color-error);
+    }
+}
+
+@media (width <= 880px) {
+    .error:active {
+        outline: 1px solid var(--color-error);
+        border: 1px solid var(--color-error);
+    }
+}
+
+
+.input {
+    height: 100%;
+    padding: 0 18px;
+    flex: 1;
+    outline: none;
+    line-height: 150%;
+    min-width: 200px;
+}
+
+.inputFilled::placeholder {
+    color: var(--color-main-text);
+    font-weight: 400;
+}
+
+.errorText {
+    color: var(--color-error);
+}
+
+.icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 18px;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-focus-ring-color: transparent;
+}
+
+.openIcon {
+    transform: rotate(180deg);
+    background-color: transparent;
+}
+
+.errorLabel {
+    margin-top: 4px;
+}
+
+
+@media (width <= 880px) {
+    .inputWrapper {
+        height: 44px;
+    }
+
+    .noMobile {
+        pointer-events: none;
+    }
+
+    .errorLabel {
+        margin-top: 2px;
+        font-size: 12px;
+    }
+}

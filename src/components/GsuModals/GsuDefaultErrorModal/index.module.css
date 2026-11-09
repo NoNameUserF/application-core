@@ -1,0 +1,46 @@
+.errorContent {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.errorContentWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--color-default-background);
+}
+.errorContentHeaderText {
+	line-height: 120%;
+	text-align: center;
+	margin-top: 24px;
+}
+.errorContentDescription {
+	margin-top: 12px;
+	margin-bottom: 32px;
+	text-align: center;
+}
+
+.errorContentReload {
+	width: 100%;
+}
+
+.errorContentReload:hover {
+	background: var(--color-secondary-hover);
+}
+
+.errorIcon {
+	width: 56px;
+	height: 56px;
+}
+
+.errorIcon img {
+	width: 56px;
+	height: 56px;
+}
+
+@media (max-width: 880px) {
+  .errorContentDescription {
+    margin-bottom: 24px;
+  }
+}

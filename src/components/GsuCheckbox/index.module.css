@@ -1,0 +1,16 @@
+.checkboxIcon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+}
+.checkboxIcon:hover {
+	border-radius: 8px;
+	background-color: var(--color-checkbox-shadow-hover);
+}
+
+.checkboxIcon:active {
+	background-color: var(--color-primary);
+}

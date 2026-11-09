@@ -1,0 +1,83 @@
+.tooltip {
+	position: absolute;
+	background-color: var(--color-tooltip-main);
+	color: var(--color-secondary);
+	padding: 6px 12px;
+	border-radius: 8px;
+	white-space: nowrap;
+	z-index: 2001;
+	pointer-events: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.tooltipArrow {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 12px solid var(--color-tooltip-main);
+	transform: rotate(-90deg);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.tooltipArrow.left{
+	position: absolute;
+	right: -12px;
+	top: 30%;
+}
+
+.tooltipArrow.right {
+	position: absolute;
+	transform: rotate(90deg);
+	left: -12px;
+	top: 30%;
+}
+
+.tooltipArrow.top-left {
+	position: absolute;
+	left: 50%;
+	bottom: -12px;
+	transform: rotate(180deg);
+}
+
+.tooltipArrow.top-center {
+	position: absolute;
+	left: 50%;
+	bottom: -12px;
+	transform: rotate(0deg) translateX(50%) ;
+}
+
+.tooltipArrow.top-right {
+	position: absolute;
+	left: 50%;
+	bottom: -12px;
+	transform: rotate(180deg);
+}
+
+.tooltipArrow.bot-left {
+	position: absolute;
+	transform: rotate(180deg);
+	left: 2px;
+	top: -8px;
+}
+
+.tooltipArrow.bot-center {
+	position: absolute;
+	transform: rotate(180deg) translateX(50%) ;
+	left: 50%;
+	top: -8px;
+}
+
+.tooltipArrow.bot-right {
+	position: absolute;
+	transform: rotate(180deg);
+	right: 6px;
+	top: -8px;
+}

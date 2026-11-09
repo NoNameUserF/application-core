@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es5", // Для широкой совместимости
+    "lib": ["es2017", "dom"], // Библиотеки, используемые в вашем проекте
+    "jsx": "react-jsx", // Поддержка JSX
+    "moduleResolution": "node", // Node.js стиль модулей
+    "esModuleInterop": true, // Интероперабельность с CommonJS модулями
+    "skipLibCheck": true, // Пропустить проверку типов внутри node_modules
+    "allowSyntheticDefaultImports": true, // Импорт по умолчанию для CommonJS модулей
+    "noImplicitAny": true, // Запрет на использование неявного типа any
+    "strict": true, // Включить строгий режим
+    "forceConsistentCasingInFileNames": true, // Консистентные имена файлов
+    "module": "esnext", // ESNext модули
+    "outDir": "./dist", // Папка для выходных файлов
+    "rootDir": "./src", // Корневая папка исходников
+    "declaration": true, // Генерация файлов декларации
+    "declarationMap": true,
+    "declarationDir": "./dist", // Папка для файлов декларации
+    "emitDeclarationOnly": false, // Генерировать как JS, так и декларации
+    "resolveJsonModule": true, // Импорт JSON-файлов
+    "strictNullChecks": true, // Проверка на null/undefined
+    "isolatedModules": true, // Подготовка для работы с модульными сборщиками, такими как Vite
+    "types": ["node"],               // Добавьте эту строку
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "**/__tests__/*"]
+}

@@ -1,0 +1,76 @@
+.gsuInfoBlock {
+    display: flex;
+    cursor: pointer;
+}
+
+.gsuInfoBlock.bottom {
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.iconWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.iconWrapper:hover {
+    background-color: var(--color-primary-background);
+}
+
+.textWrapper {
+    padding: 16px 24px;
+    border: 1px solid var(--color-main-border);
+    background: white;
+    border-radius: 10px;
+    box-shadow: 4px 8px 32px 0px var(--color-tooltip-boxShadow);
+}
+
+.textWrapper.bottom {
+    margin-top: 20px;
+}
+
+.textContainer {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    z-index: 10;
+}
+
+.textContainer.right {
+    width: 100%;
+    left: 0;
+    top: 32px;
+}
+
+.textContainer.bottom {
+    width: 90%;
+    right: 4px;
+    top: 24px;
+}
+
+.text {
+    cursor: text;
+    line-height: 150%;
+    color: var(--color-main-text);
+}
+
+@media (max-width: 540px) {
+    .textContainer.right {
+        width: 100%;
+        right: -12px;
+        top: 16px;
+    }
+
+    .gsuInfoBlock.right {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .textWrapper.right {
+        margin-top: 20px;
+    }
+}

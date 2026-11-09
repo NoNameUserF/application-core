@@ -1,0 +1,37 @@
+.btnViewContainer {
+	max-width: 100%;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 16px;
+}
+
+.btnViewContainer:last-child {
+	margin-right: 0;
+}
+
+.btnViewItem {
+	display: flex;
+	align-items: center;
+	height: 40px;
+	padding: 0 12px;
+	border-radius: 8px;
+	border: 1px solid var(--color-primary);
+}
+
+.btnViewLabel {
+	display: block;
+	font-weight: 600;
+	margin: 0 12px 0 8px;
+}
+
+.btnViewCloseIcon {
+	height: 16px;
+	cursor: pointer;
+}
+
+@media (width <= 880px) {
+	.btnViewContainer {
+		gap: 12px;
+	}
+}

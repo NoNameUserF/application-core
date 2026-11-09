@@ -1,0 +1,6 @@
+.gsuWizardGroupContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 660px;
+    flex: 1;
+}

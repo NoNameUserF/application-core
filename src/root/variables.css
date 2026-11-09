@@ -1,0 +1,43 @@
+:root {
+    --color-default-background: #FFFFFF;
+    --color-transparent: RGBA(0, 0, 0, 0);
+
+    --color-primary: #FFA912;
+    --color-primary-hover: #FFC64A;
+    --color-disabled: #DFDFDF;
+    --color-secondary: #0C0C0C;
+    --color-secondary-hover: #606060;
+    --color-text-disabled: #A6A6A6;
+    --color-error: #E51C00;
+    --color-success: #2FA933;
+    --color-error-hover: #EF4E37;
+
+    --color-main-text: #0C0C0C;
+    --color-secondary-text: #606060;
+    --color-input-placeholder-text: #838383;
+
+    --color-main-wizard-five-part-saturation: RGBA(255, 255, 255, 0.2);
+    --color-stepper-background: #FFCD90;
+    --color-actions-background: #F8F8F8;
+    --color-tooltip-main: #FFFAE6;
+    --color-tooltip-boxShadow: RGBA(12, 12, 12, 0.08);
+    --color-anti-flash-white: #F3F3F3;
+    --color-primary-background: #FFFAE6;
+    --color-main-border: #CECECE;
+    --color-radio-button-border: #AAA;
+    --color-descritpion-text: #909090;
+    --color-svg-path: #909090;
+    --color-stepper-color: #7A7A8A;
+    --color-stepper-fill-primary: #FD8C28;
+    --color-stepper-fill-secondary: #FFA454;
+    --color-button-count-disabled: #F1F1F1;
+    --color-secondary-wizard: #000;
+    --color--color-effect-statehalf-saturation: #03020AA3;
+    --color-checkbox-shadow-hover: RGBA(0, 0, 0, 0.1);
+    --color-checkbox-shadow-active: RGBA(0, 0, 0, 0.2);
+    --color-checkbox-shadow-active-fifty: RGBA(3, 2, 10, 0.85);
+    --color-alert-background: #333333;
+    --color-boxshadow: RGBA(0, 0, 0, 0.05);
+    --color-separator: #EBEBEB;
+
+}

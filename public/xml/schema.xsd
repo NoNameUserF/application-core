@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Корневой элемент flow, содержащий сразу несколько question -->
+    <xs:element name="flow">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="question" type="QuestionType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Простое перечисление для атрибута type -->
+    <xs:simpleType name="oneOrMany">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="one"/>
+            <xs:enumeration value="many"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Тип для вопроса: содержит атрибуты и сразу вложенные ответы -->
+    <xs:complexType name="QuestionType">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="answer" type="AnswerType"/>
+        </xs:sequence>
+        <xs:attribute name="label" type="xs:string" use="required"/>
+        <xs:attribute name="gpt" type="xs:string" use="required"/>
+        <xs:attribute name="key" type="xs:string" use="required"/>
+        <xs:attribute name="type" type="oneOrMany" use="required"/>
+    </xs:complexType>
+
+    <!-- Тип для ответа: содержит атрибуты и сразу вложенные вопросы -->
+    <xs:complexType name="AnswerType">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="question" type="QuestionType"/>
+        </xs:sequence>
+        <xs:attribute name="label" type="xs:string" use="required"/>
+        <xs:attribute name="key" type="xs:string" use="required"/>
+    </xs:complexType>
+
+</xs:schema>

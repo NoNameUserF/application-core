@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "jsx": "react",
+    "declaration": true,
+    "declarationMap": true,
+    "rootDir": "lib",
+    "outDir": "dist/ts",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "strict": true,
+    "useDefineForClassFields": true,
+    "skipLibCheck": true
+  },
+  "include": ["lib/**/*"],
+  "exclude": ["node_modules", "dist", "build"]
+}

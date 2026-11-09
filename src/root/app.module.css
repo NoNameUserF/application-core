@@ -1,0 +1,19 @@
+.gsuApp {
+	position: relative;
+	display: flex;
+	flex: 1 1 auto;
+	overflow-x: hidden;
+}
+.gsuNav {
+	display: flex;
+	flex-direction: column;
+	row-gap: 24px;
+}
+
+@media (max-width: 880px) {
+	.gsuApp {
+		flex-direction: column;
+	}
+}
+
+

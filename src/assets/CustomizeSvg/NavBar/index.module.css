@@ -1,0 +1,6 @@
+.active path {
+	stroke: var(--color-primary);
+}
+.default path {
+	stroke: var(--color-svg-path);
+}

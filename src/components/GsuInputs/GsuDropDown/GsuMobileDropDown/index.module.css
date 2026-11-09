@@ -1,0 +1,107 @@
+.gsuMobileAutocomplete {
+    width  :100%
+}
+
+.mobileAutocompleteInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+
+.mobilаeAutocompleteWrapper {
+    padding-bottom: 4px;
+}
+
+.mobileAutocompleteWrapper:active {
+    background-color: transparent;
+}
+
+.mobileAutocompleteInner {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    padding: 0 8px;
+    margin-right: 8px;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.autocompleteHighlight {
+    background-color: var(--color-actions-background);
+}
+
+.mobileAutocompleteContent {
+    display: flex;
+    align-items: center;
+}
+.mobileAutocompleteButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: var(--color-default-background);
+    border: none;
+    cursor: pointer;
+    margin-right: 12px;
+}
+.mobileAutocompleteInfoText {
+    color: var(--color-main-text);
+    font-size: 16px;
+}
+
+.mobileAutocompleteItemsWrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: 8px;
+    min-height: 224px;
+    height: calc(100% - 106px);
+}
+.mobileAutocompleteLabel {
+    margin-left: 8px;
+    color: var(--color-main-text);
+}
+
+.mobileAutocompleteImg {
+    width: 20px;
+}
+
+.mobileEmoji {
+    width : 22px;
+}
+
+.mobileAutocompleteImg > img {
+    width: 20px;
+    height: 20px;
+}
+
+.mobileAutocompleteNotFound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.mobileAutocompleteNotFoundText {
+    margin-top: 12px;
+    line-height: 115%;
+    color: var(--color-text-disabled);
+}
+
+@media (min-width: 881px) {
+    .mobileAutocmplete {
+        display: none;
+    }
+}
+
+@media (max-width: 880px) {
+    .mobileAutocompleteInner:active {
+        background-color:var(--color-actions-background) ;
+    }
+}

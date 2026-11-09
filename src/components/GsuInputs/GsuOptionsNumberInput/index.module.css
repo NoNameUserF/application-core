@@ -1,0 +1,42 @@
+.gsuInputValueContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    min-width: 82px;
+    height: 100%;
+}
+
+.gsuInputValue {
+    color: var(--color-main-text);
+    line-height: 150%;
+    font-size: 16px;
+}
+
+.optionsNumberSeparatorBlock {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.optionsNumberSeparator {
+    width : 1px;
+    height : 32px;
+    background-color: var(--color-main-border);
+}
+
+.iconOptions {
+    padding-left: 4px;
+    padding-right: 16px;
+}
+
+.iconOptionsOpen {
+    padding-right: 4px;
+    padding-left: 16px;
+}
+
+@media (width <= 880px) {
+    .optionsNumberSeparator {
+        height: 24px;
+    }
+}

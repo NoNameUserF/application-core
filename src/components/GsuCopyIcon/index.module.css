@@ -1,0 +1,28 @@
+.cartCopyInfo {
+	border: none;
+	background: transparent;
+	margin-left: auto;
+}
+
+.copyIcon {
+	display: block;
+	width: 24px;
+	height: 24px;
+}
+
+@media (min-width: 881px) {
+	.copyIcon:hover > path {
+		stroke: black;
+	}
+}
+
+@media (max-width: 880px) {
+	.copyIcon:active > path {
+		stroke: black;
+	}
+
+	.copyIcon {
+		width: 20px;
+		height: 20px;
+	}
+}

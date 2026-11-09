@@ -1,0 +1,61 @@
+.modalContainer {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.displayModal_emoji {
+	width: 85px;
+	height: 85px;
+}
+
+.displayModal_emoji img {
+	width: 85px;
+	height: 85px;
+}
+
+.displayModal_title {
+	text-align: center;
+	max-width: 300px;
+	margin-top: 24px;
+	line-height: 120%;
+}
+.displayModal_text {
+	text-align: center;
+	line-height: 150%;
+	margin-top: 12px;
+	margin-bottom: 32px;
+}
+.modalEnjoyButtonsContainer {
+	width: 100%;
+	display: flex;
+	gap: 16px;
+}
+.modalBack, .modalToMain {
+	flex: 1
+}
+
+@media (max-width: 880px) {
+	.modalBack, .modalToMain {
+		flex: unset;
+	}
+
+	.displayModal_emoji {
+		width: 64px;
+		height: 64px;
+	}
+
+	.displayModal_emoji img {
+		width: 64px;
+		height: 64px;
+	}
+
+	.modalEnjoyButtonsContainer {
+		flex-direction: column;
+		gap: 8px
+	}
+
+  .displayModal_text {
+    margin-bottom: 24px;
+  }
+}

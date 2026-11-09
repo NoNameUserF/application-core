@@ -1,0 +1,62 @@
+.countContainer {
+	display: flex;
+	background: var(--color-transparent);
+	border-radius: 100px;
+	max-width: 137px;
+	width: 100%;
+	margin-left: 16px;
+}
+.countWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.countValue {
+	color: var(--color-main-text);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 40px;
+	line-height: 150%;
+	font-weight: 600;
+}
+
+.countButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border: 1px solid var(--color-main-border);
+	border-radius: 100px;
+	background: transparent;
+	height: 32px;
+	width: 32px;
+	transition: all ease-in-out 0.2s;
+}
+
+.countButton__disabled {
+  border: 1px solid var(--color-button-count-disabled);
+}
+
+@media (min-width: 881px) {
+	.countButton:hover {
+		border-color: var(--color-main-text);
+	}
+	.countButton__disabled:hover {
+		border: 1px solid var(--color-button-count-disabled);
+	}
+}
+
+@media (max-width: 880px) {
+	.countButton:active {
+		border-color: var(--color-main-text);
+	}
+	.countButton__disabled:active {
+		border: 1px solid var(--color-button-count-disabled);
+	}
+	.countContainer {
+		max-width: 105px;
+	}
+}

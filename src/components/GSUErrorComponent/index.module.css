@@ -1,0 +1,43 @@
+.errorContent {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.errorContentWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--color-default-background);
+	border-radius: 24px;
+	padding: 32px;
+}
+.errorContentHeaderText {
+	line-height: 28px;
+	max-width: 280px;
+	text-align: center;
+	margin-top: 24px;
+}
+.errorContentDescription {
+	line-height: 150%;
+	margin-top: 24px;
+	text-align: center;
+}
+
+.errorContentReload {
+
+}
+.errorContentReload:hover {
+
+}
+
+@media (max-width: 880px) {
+	.errorContentWrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: transparent;
+		border-radius: 0;
+		padding: 0;
+	}
+}

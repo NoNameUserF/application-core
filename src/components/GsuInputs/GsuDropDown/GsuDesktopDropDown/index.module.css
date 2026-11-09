@@ -1,0 +1,105 @@
+.options {
+    position: absolute;
+    top: 100%;
+    bottom: unset;
+    left: 0;
+    right: 0;
+    background-color: var(--color-default-background);
+    border: 1px solid var(--color-anti-flash-white);
+    border-radius: 8px;
+    margin-top: 8px;
+    margin-bottom: 0;
+    z-index: 2;
+    box-shadow: 0px 2px 12px -6px var(--color-checkbox-shadow-active);
+    max-height: 264px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+
+.optionsTop {
+    top: unset;
+    bottom: 100%;
+    margin-top: 0;
+    margin-bottom: 8px;
+    box-shadow: 0px -8px 16px 0px var(--color-checkbox-shadow-active);
+}
+
+.listContainer {
+    padding: 8px 4px 8px 8px;
+}
+
+
+.notFound  {
+    color: var(--color-text-disabled);
+    padding: 8px;
+}
+
+.option {
+    cursor: pointer;
+}
+
+.optionDropDownItemDescription {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    margin-right: 8px;
+}
+.optionDropDownItemDescriptionContent {
+    display: flex;
+    align-items: center;
+}
+
+.optionDropDownItemDescriptionImgSrc {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.optionDropDownItemDescriptionImgSrc > img   {
+    width : 20px
+}
+
+.optionDropDownItemDescriptionImg {
+    width : 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.optionDropDownItemDescriptionText {
+    margin-left: 8px;
+    color: var(--color-main-text);
+}
+.optionHighlight {
+    background-color: var(--color-actions-background);
+}
+
+.optionInner {
+    display: flex;
+    height: 40px;
+    padding-left: 8px;
+    margin-right: 4px;
+    border-radius: 4px;
+}
+
+
+
+@media (max-width: 880px) {
+    .options {
+        display: none;
+    }
+
+    .optionsTop {
+        display: none;
+    }
+
+    .option:active {
+        background-color: var(--color-actions-background);
+    }
+}
